@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "thp",
+  "version": "${version}",
+  "name": "The Hungering Portal",
+  "description": "Gates the End Portal behind a ritual: a built End Portal won't let anyone pass until ten specific offerings are thrown in with enough player witnesses present. Server-side, with cryptic in-game clues; ops can re-lock it with /thp reset.",
+  "authors": ["Andrewwwwwwwwwwwwwww"],
+  "license": "All Rights Reserved (mod); bundled End fight derived from RogueCraft by MonoCode under CC-BY-SA-4.0 - see THIRD_PARTY_NOTICES.md",
+  "environment": "*",
+  "entrypoints": {
+    "main": ["io.github.andrewwwwwwwwwwwwwww.thp.TheHungeringPortal"],
+    "modmenu": ["io.github.andrewwwwwwwwwwwwwww.thp.client.ModMenuIntegration"]
+  },
+  "mixins": ["thp.mixins.json"],
+  "contact": {
+    "homepage": "https://github.com/Andrewwwwwwwwwwwwwww/thp",
+    "sources": "https://github.com/Andrewwwwwwwwwwwwwww/thp",
+    "issues": "https://github.com/Andrewwwwwwwwwwwwwww/thp/issues"
+  },
+  "icon": "assets/thp/icon.png",
+  "depends": {
+    "fabricloader": ">=0.19.2",
+    "fabric-api": ">=0.148.2",
+    "minecraft": "~26.1.2"
+  },
+  "recommends": {
+    "modmenu": "*"
+  }
+}
