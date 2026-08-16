@@ -1,5 +1,49 @@
 # The Hungering Portal Changelog
 
+## [2.2.0] - 2026-08-15
+### Added
+- **An advancement tree for the portal ritual.** A new tab, on a purpur background, showing every offering the portal demands. The root unlocks the moment you join, so the whole checklist is visible from the start rather than appearing only once you stumble onto your first offering.
+- One advancement per offering, all ten of them: the Trident, Netherite Block, Sniffer Egg, Enchanted Golden Apple, Totem of Undying, Beacon, Mace, 16 Wither Roses, Conduit and Zombie Head. Each carries its ritual flavour text plus a hint about where to actually find the thing.
+- The four that gate on a boss or a rare structure — Netherite Block, Beacon, Mace and the 16 Wither Roses — are **challenge** advancements; the rest are goals.
+- **VanillaSkills players earn Skill Shards for these.** VanillaSkills 2.0 counts the `thp` namespace when awarding shards per advancement, so finishing the tab is worth 110 Skill Shards at its default rates. THP remains completely standalone — without VanillaSkills installed these are simply advancements.
+- Traditional Chinese (zh_tw) translations for all 22 new strings, keeping both languages complete at 68 keys.
+
+
+## [2.1.1] - 2026-07-21
+### Added
+- **Full localization support.** Every player-facing string — the portal ritual titles and chat, the offering list, command feedback, and the Mod Menu config screen — is now translatable. English is the built-in default; drop a `<locale>.json` in the jar or in `<world>/thp/lang/` to translate. See `TRANSLATING.md`.
+
+## [2.1.0] - 2026-07-20
+
+### Added
+- **A custom, multi-phase Ender Dragon fight.** After the portal ritual is complete and players
+  first enter the End, an overhauled dragon boss plays out in a custom arena: an aerial phase
+  (fireballs, meteors, TNT lines, lightning endermen), a shulker-summoning "Hyper Jean" phase
+  (lightning rings, homing missiles, a splitting dragon, teleports), a wave-based add fight, and
+  a healing-crystal finale. The vanilla dragon fight is fully suppressed; the surrounding vanilla
+  End island is cleared and replaced by the custom arena, generated on first entry while players
+  are held safely above it.
+- When the dragon dies, the **exit portal lights inside the arena's central fountain** (a sunken
+  portal pool around the dragon-egg pillar) and **full vanilla End gateways** are generated, so
+  players can return home and explore the outer End as usual.
+- **The dragon can be revived vanilla-style**: place 4 End Crystals on the obsidian pads around
+  the exit portal to respawn it and run the whole fight again (the portal goes dark during the
+  fight and relights on victory; the egg and gateways only appear on the first kill).
+
+### Changed
+- **Offerings updated**: the Recovery Compass is replaced by **16 Wither Roses** (throw in any
+  stacks — partial progress counts and is returned if the portal times out), and the Pigstep
+  Music Disc is replaced by a **Conduit**.
+- `/thp portalreq` now prints the requirements **in chat only**; the on-screen title sequence
+  plays only when a player jumps into a not-yet-opened portal.
+
+### Notes
+- The fight is **derived from [RogueCraft](https://modrinth.com/datapack/rogue-craft) by MonoCode**,
+  used under **CC-BY-SA-4.0** and adapted to run standalone (roguelite difficulty scaling, skillpoints,
+  and hub return removed). See `THIRD_PARTY_NOTICES.md`. That bundled data carries CC-BY-SA-4.0; the
+  mod's own code/assets remain under the project license.
+- Wave mobs use base vanilla stats (RogueCraft's run-based difficulty scaling does not apply here).
+
 ## [2.0.0] - 2026-06-27
 
 ### Changed
